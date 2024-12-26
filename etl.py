@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-st.write('avd5')
+st.write('avd7')
 data={
     'Task':['Extract','Transform','Load'],
     'Status':['Completed','Inprogress','pending']
