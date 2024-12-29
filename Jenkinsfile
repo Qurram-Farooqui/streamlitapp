@@ -13,13 +13,13 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                sh 'docker build -t myapp .'
+                sh 'docker build -t myimage .'
             }
 
         }
         stage('Create Container') {
             steps{
-                sh 'docker run -d -p 8501:8501 myapp'
+                sh 'docker run -d -p 8501:8501 myimage'
         }
     }
 }
