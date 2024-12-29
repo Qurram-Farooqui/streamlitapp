@@ -6,6 +6,11 @@ pipeline {
                 git url:'https://github.com/Qurram-Farooqui/streamlitapp.git', branch:'main'
             }
         }
+        stage('Cleanup Stage') {
+            steps{
+                sh 'docker rm -f $(docker ps -aq)'
+            }
+        }
         stage('Build Docker image') {
             steps {
                 sh 'docker build -t myapp .'
